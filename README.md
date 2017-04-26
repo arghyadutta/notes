@@ -1,8 +1,1 @@
 # notes
-
-
-```latex
-
-$\sum$
-
-```
