@@ -1,23 +1,22 @@
 # Titbits of LAMMPS
-> Nothing original here, everything compiled. But hard to find anything useful about 
-> LAMMPS in one place. I am trying to put together the information which I get online
-> in one place for *my* easy comprehension.
+Nothing original here, everything compiled from other sources. But it is hard to find
+useful instruction about LAMMPS in one place on the web. I am trying to put together 
+few useful commands and ideas which I got online in one place for *my* easy comprehension.
 
-### Generating the initial configuration
-$\alpha=2\beta$
+#### Generating the initial configuration
 This can be done by hand or using dedicated packages.
 
-### The underlying principle
+#### The underlying principle
 
-### Setting up the force field 
+#### Setting up the force field 
 
-### LAMMPS units 
+#### LAMMPS units 
 
-### Running the simulation  
+#### Running the simulation  
 
-### Output particle position 
+#### Output particle position 
 
-### Output thermodynamic variables 
+#### Output thermodynamic variables 
 
-### Helpful web-pages 
-Official LAMMPS Documentation: http://lammps.sandia.gov/doc/Manual.html
+#### Helpful web-pages 
+1. Official LAMMPS Documentation: http://lammps.sandia.gov/doc/Manual.html (most unhelpful for beginners, IMHO. :-1:)
