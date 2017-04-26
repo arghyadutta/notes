@@ -1,1 +1,8 @@
 # notes
+
+
+```bash
+
+ls $VALUE
+
+```
