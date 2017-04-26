@@ -9,6 +9,15 @@ creates an empty file called file.txt in the current folder.
 cat file.txt
 ```
 prints the content of file.txt onto the command line.
+
+```bash
+cat file1.txt file2.txt > newfile.txt
+```
+merges contents of two different files into a single file.
+```bash
+cat file1.txt >> newfile.txt
+```
+this would append (note the >> symbol) contents of 'file1.txt' to the end of 'newfile.txt'. A single greater than symbol (>) would overwrite 'newfile.txt' with 'file1.txt'.
 ```bash
 find $\sim$ -name *.jpg
 ```
