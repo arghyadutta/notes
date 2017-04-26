@@ -1,8 +1,8 @@
 # notes
 
 
-```bash
+```math
 
-ls $VALUE
+$\sum$
 
 ```
