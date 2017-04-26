@@ -1,7 +1,7 @@
 # notes
 
 
-```math
+```latex
 
 $\sum$
 
