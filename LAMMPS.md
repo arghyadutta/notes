@@ -1,6 +1,6 @@
-**Titbits of LAMMPS**
-** Nothing original here, everything compiled. But hard to find anything useful in **
-* LAMMPS * 
+#Titbits of LAMMPS#
+> Nothing original here, everything compiled. But hard to find anything useful in 
+> LAMMPS 
 
 * Generating the initial configuration *
 > This can be done by hand or using dedicated packages.
