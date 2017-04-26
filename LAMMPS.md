@@ -1,17 +1,19 @@
-#Titbits of LAMMPS#
+#Titbits of LAMMPS
 > Nothing original here, everything compiled. But hard to find anything useful in 
 > LAMMPS 
 
-* Generating the initial configuration *
-> This can be done by hand or using dedicated packages.
+### Generating the initial configuration**
+>This can be done by hand or using dedicated packages.
 
-* The underlying principle *
-* Setting up the force field *
-* LAMMPS units *
+### The underlying principle
 
-* Running the simulation  *
+### Setting up the force field 
 
-* Output particle position *
+### LAMMPS units 
 
-* Output thermodynamic variables *
-* Helpful web-pages *
+### Running the simulation  
+
+### Output particle position 
+
+### Output thermodynamic variables 
+### Helpful web-pages 
