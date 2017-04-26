@@ -20,3 +20,4 @@ This can be done by hand or using dedicated packages.
 ### Output thermodynamic variables 
 
 ### Helpful web-pages 
+Official LAMMPS Documentation: http://lammps.sandia.gov/doc/Manual.html
