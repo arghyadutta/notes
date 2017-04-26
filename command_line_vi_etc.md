@@ -1,10 +1,13 @@
-## Titbits of Linux, not original ofc
+## Titbits of Linux, not original ofc :+1:
 ## By Arghya Dutta
 
-### touch file.txt
+```bash
+touch file.txt
+```
 > creates an empty file called file.txt in the current folder.
-	
-### cat file.txt
+
+```bash
+cat file.txt
 > prints the content of file.txt onto the command line.
 	
     \item \textbf{find $\sim$ -name *.jpg}
