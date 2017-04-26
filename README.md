@@ -12,6 +12,9 @@ Cheat-sheet for those working in MD.
 
 ## File Description
 1. LAMMPS.md : Notes on working with LAMMPS
-2. command_line_vi_etc.md: Practical Vi/Vim/Unix commands
+2. command_line.md: Practical Vi/Vim/Unix commands
 
 *Work In Progress
+
+This folder will contain some notes about LAMMPS, bash script, and myriad other 
+things. Update will be sporadic, and even absent. Expect nothing. :speak_no_evil:
