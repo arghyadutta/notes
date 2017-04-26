@@ -1,4 +1,4 @@
-# Titbits of Linux, not original ofc ::D:
+# Titbits of Linux, not original ofc :lol:
 
 ```bash
 touch file.txt
