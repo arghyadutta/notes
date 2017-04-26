@@ -1,11 +1,12 @@
-## Titbits of Linux, not original ofc :+1:
-## By Arghya Dutta
+# Titbits of Linux, not original ofc :+1:
 
 ```bash
 touch file.txt
 ```
 > creates an empty file called file.txt in the current folder.
-
+```c++
+using namespace std;
+```
 ```bash
 cat file.txt
 > prints the content of file.txt onto the command line.
