@@ -48,14 +48,14 @@ ps aux | grep terminal
 ```bash
 w [options: --no-header, --no-current, --short, --from, --old-style, --ip-addr]
 ```
-What command is sort of a stalking tool to check user activity on a network. This displays terminal status and last run command for each user. This can also be used as a simple safety tool for system administrators. 
+`what` command is sort of a stalking tool to check user activity on a network. This displays terminal status and last run command for each user. This can also be used as a simple safety tool for system administrators. 
 ```bash
 du .
 du file.txt
 du -alh
 ls -alh
 ```
-Du command will display disk usage of the whole directory (Line 1) or a specific file (Line 2). Adding the `-alh` flag will list all files in the directory in a human readable format (KB, MB, GB, etc). Sidenote: This flag works with `ls` command too.
+`du` command will display disk usage of the whole directory (Line 1) or a specific file (Line 2). Adding the `-alh` flag will list all files in the directory in a human readable format (KB, MB, GB, etc). Sidenote: This flag works with `ls` command too.
 ```bash
 watch --interval=1 [command]
 watch --interval=1 qstat
