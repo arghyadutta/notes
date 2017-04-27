@@ -3,6 +3,17 @@ Nothing original here, everything compiled from other sources. But it is hard to
 useful instruction about LAMMPS in one place on the web. I am trying to put together 
 few useful commands and ideas which I got online in one place for *my* easy comprehension.
 
+#### Parts of an input script: [Source](http://www.u.arizona.edu/~stefanb/Files/HPCTutorials/MD-lammps-Final.pdf)
+* Parts of An Input Script
+  * Initialize: units, dimensions, etc.
+  * Atomic positions and velocities
+  * Settings:
+    * Interatomic potential
+    * Run time simulation parameters (e.g. timestep)
+    * Fixes - operations during dynamics (e.g. thermostat)
+    * Computes - calculation of properties during dynamics
+  * Run!
+
 #### Generating the initial configuration
 
 This can be done by hand or using dedicated packages.
@@ -24,3 +35,11 @@ This can be done by hand or using dedicated packages.
 2. LAMMPS for dummies. :+1:
 [part 1](http://wp.df.uba.ar/gebi/wp-content/uploads/sites/9/2016/06/lammps.pdf)
 [part 2](http://wp.df.uba.ar/gebi/wp-content/uploads/sites/9/2016/06/ferlammps.pdf)
+3. This: http://www.u.arizona.edu/~stefanb/resources.html
+
+#### Books:
+1. D. Frenkel and B. Smit, Understanding Molecular Simulations: From  Algorithms to Applications, Academic Press, 2nd edition. 
+
+2. R. LeSar, Introduction to Computational Materials Science: Fundamentals to Applications, Cambridge University Press, 1st edtion. 
+
+3. J.G. Lee, Computational Materials Science: An Introduction. Ideal for quickly using LAMMPS and VASP
