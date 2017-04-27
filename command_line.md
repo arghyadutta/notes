@@ -7,8 +7,10 @@ creates an empty file called file.txt in the current folder.
 
 ```bash
 cat file.txt
+cat file1.txt file2.txt > newfile.txt
+cat file1.txt >> newfile.txt
 ```
-prints the content of file.txt onto the command line.
+Line 1 prints the content of file.txt onto the command line. Line 2 merges content of two different files into a single file one after the other. Line 3 would append (note the >> symbol) contents of 'file1.txt' to the end of 'newfile.txt'. A single greater than symbol (>) would overwrite contents of 'newfile.txt' with that of 'file1.txt'.
 ```bash
 find $\sim$ -name *.jpg
 ```
@@ -36,6 +38,11 @@ ps aux
 ```bash
 ps aux | grep terminal
 ```
+```bash
+w [options: --no-header, --no-current, --short, --from, --old-style, --ip-addr]
+```
+What command is sort of a stalking tool to check user activity on a network. This displays terminal status and last run command for each user. This can also be used as a simple safety tool for system administrators. 
+
 ## Source:
 1) https://quickleft.com/blog/command-line-tutorials-finding-grepping/
 2) https://quickleft.com/blog/command-line-tutorials-tips-tricks/
