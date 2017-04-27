@@ -4,7 +4,6 @@
 > in one place for *my* easy comprehension.
 
 ### Generating the initial configuration
-$\alpha=2\beta$
 This can be done by hand or using dedicated packages.
 
 ### The underlying principle
