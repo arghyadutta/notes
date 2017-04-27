@@ -1,4 +1,4 @@
-## Compilation of useful bash commands for reference. Nothing original. :punch:
+# Compilation of useful bash commands for reference. Nothing original. :punch:
 
 ```bash
 touch file.txt
@@ -13,8 +13,12 @@ cat file1.txt >> newfile.txt
 Line 1 prints the content of file.txt onto the command line. Line 2 merges content of two different files into a single file one after the other. Line 3 would append (note the >> symbol) contents of 'file1.txt' to the end of 'newfile.txt'. A single greater than symbol (>) would overwrite contents of 'newfile.txt' with that of 'file1.txt'.
 ```bash
 more file.txt
+less file.txt
+nano file.txt
 ```
 This would do exactly what the *cat* command does - displays the contents of the file, but in a diffrent way. When *more* is used, it displays the contents of the file one page at a time for easier viewing, within the command line. Pressing *Enter* will scroll down the document. Keyboard interrupting (*Ctrl+C*) will close the file.
+`less` does the same thing as `cat` and `more` but `less` is more, but `more` more than `more` is, so `more` is `less` less, so use more `less` if you want less `more`. One can navigate through the file with arrowkeys (which means you can scroll up too - this is why `more` is less). Pressing `q` will close the display.
+`nano` is another unix utility to display a file, and could be an alternative for users who think `vim` is advanced. 
 ```bash
 find $\sim$ -name *.jpg
 ```
@@ -37,8 +41,10 @@ grep -i "cats" ./cats.txt
 ```
 ```bash
 ps aux
+htop
+top
 ```
-"ps aux" will list all the processes running. You can also use "grep" to search through your processes with "ps aux".
+"ps aux" will list all the processes running. You can also use "grep" to search through your processes with "ps aux". `htop` can show detailed and live tracking of all processes in the system - kill signal can be passed to the user in many ways too. `htop` is in a way advanced than `top` in terms of the available utilities.
 ```bash
 ps aux | grep terminal
 ```
@@ -53,6 +59,12 @@ du -alh
 ls -alh
 ```
 Du command will display disk usage of the whole directory (Line 1) or a specific file (Line 2). Adding the *-alh* option will list all files in the directory in a human readable format (KB, MB, GB, etc). This option works with *ls* command too and comes in pretty handy.
+```bash
+watch --interval=1 *command*
+watch --interval=1 qstat
+```
+`watch` command can be your personal watchdog. For users working with clusters for MD simulations this can be a handy utility. With `watch` command one can track any process/command at a preset time interval.
+Line 2 would show all jobs submitted to the cluster and display/update the progress every 1 second. This can be used in combination with any command/file that keeps changing over time (log files for instance).
 
 ## Source:
 1) https://quickleft.com/blog/command-line-tutorials-finding-grepping/
