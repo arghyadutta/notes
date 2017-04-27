@@ -21,3 +21,6 @@ This can be done by hand or using dedicated packages.
 
 #### Helpful web-pages 
 1. Official LAMMPS Documentation: http://lammps.sandia.gov/doc/Manual.html (most unhelpful for beginners, IMHO. :-1:)
+2. LAMMPS for dummies. :+1:
+[part 1](http://wp.df.uba.ar/gebi/wp-content/uploads/sites/9/2016/06/lammps.pdf)
+[part 2](http://wp.df.uba.ar/gebi/wp-content/uploads/sites/9/2016/06/ferlammps.pdf)
