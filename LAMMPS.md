@@ -3,11 +3,8 @@ Nothing original here, everything compiled from other sources. But it is hard to
 useful instruction about LAMMPS in one place on the web. I am trying to put together 
 few useful commands and ideas which I got online in one place for *my* easy comprehension.
 
-<<<<<<< HEAD
-### Generating the initial configuration
-=======
 #### Generating the initial configuration
->>>>>>> def68876bb505672f5f034f4e709bc42b2f4520a
+
 This can be done by hand or using dedicated packages.
 
 #### The underlying principle
