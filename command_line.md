@@ -35,7 +35,12 @@ The `.` is a wildcard; it matches any character just once; for instance, output 
 `grep` provides a few more options too. To search a file in current directory for a string that's case insensitive, add the `-i` flag. The following command could match a line containing cats, cATs, CATS, etc.
 ```bash
 grep -i "cats" ./cats.txt
-```
+cut -d' ' -f1-6 /var/logs/*
+usermame date group hello 23
+cut -c1 file.txt
+``` 
+`cut` command is a very useful tool if you want to extract entries from a huge, formatted file. In Line 2 `-d` sets the delimiter - a single character that could separate entries into fields. For instance in a space separated document with data represented in a 20x10 matrix, the logical delimiter one would chose is `space`. In log files `:` could also be a sensible delimiter. In the example code provided, we are seaching for spaces and using it to divide the text after from the text before. `-f` is a flag that should be used in combination with `-d`. Once a delimiter is set, the whole file is divided into fields of data. For example if we run `cat file.txt` and we get Line 3 on the terminal, and we set the delimiter as `space`, we then divide the text at every point we encounter a `space`. Then the first 'field' could be reffered to as `-f1`, the second as `-f2`, and so on. Line 2 therefore searches for space separated entries (`-d' '`) in all the files (`*` wildcard) stored in location `/var/logs/` and prints fields from 1 to 6 (`-f1-6`). Generally people tend to `cut` with 'pipe' after `grep`-ing something. Using the flag `-c` followed by any number would print the character it encounters in the position specified by the number. Line 4 would threfore print `u` into the terminal. Character ranges are also possible like in the case of `-f`.
+
 ```bash
 ps aux
 htop
@@ -62,6 +67,19 @@ watch --interval=1 qstat
 ```
 `watch` command can be your personal watchdog. For users working with clusters for MD simulations this can be a handy utility. With `watch` command one can track any process/command at a preset time interval.
 Line 2 would show all jobs submitted to the cluster and display/update the progress every 1 second. This can be used in combination with any command/file that keeps changing over time (log files for instance).
+
+```bash
+cut -d' ' -f1-10
+```
+`cut` command is a very useful tool if you want to extract 
+
+##Tweaks
+Linux is known for its customizability. Hence we shall behold into some simple tweaks which couldst maketh thy life smoother. 
+```bash
+ls -l
+ll
+```
+Sometimes it is necessary to look into files and folders in detail. This detail in linux can be visualized through `ls` with the flag `-l`, wherein the terminal displays contents of that directory in a long listed format. But typing `ls -l` takes a few seconds longer than `ll`, doesn't it? Well, by modifying the `~/.bashrc` file located in your home directory ( `~/` means home directory of the user). All you have to do is `echo 'alias ll="/usr/bin/ls -l"' >> ~/.bashr` or edit `~/.bashr` with your favorite editing tool to add `alias ll="/usr/bin/ls -l"` at the end and save. Next time when you want to long list a directory, use `ll`. `ll` in this case is called an alias. 
 
 ## Source:
 1) https://quickleft.com/blog/command-line-tutorials-finding-grepping/
