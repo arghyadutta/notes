@@ -7,12 +7,13 @@ Cheat-sheet for those working in MD.
 3. [File Description](#describe)
 
 ## Introduction
-command_line.md  LAMMPS.md  README.md  VMD.md
+
+
 ## Tasks
 Checked tasks are active work in progress.
-- [ ] LAMMPS
-- [x] command_line
-- [x] VMD
+- [ ] [LAMMPS](https://github.com/thatgeeman/notes/blob/master/LAMMPS.md)
+- [x] [command_line](https://github.com/thatgeeman/notes/blob/master/command_line.md)
+- [ ] [VMD](https://github.com/thatgeeman/notes/blob/master/VMD.md)
 
 ## File Description
 1. LAMMPS.md : Notes on working with LAMMPS
