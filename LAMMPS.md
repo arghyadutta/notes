@@ -36,6 +36,8 @@ This can be done by hand or using dedicated packages.
 [part 1](http://wp.df.uba.ar/gebi/wp-content/uploads/sites/9/2016/06/lammps.pdf)
 [part 2](http://wp.df.uba.ar/gebi/wp-content/uploads/sites/9/2016/06/ferlammps.pdf)
 3. This: http://www.u.arizona.edu/~stefanb/resources.html
+4. To get an idea about how you can progressivley build a MD code from scratch and increase its 
+efficiency using paralleism. And, how that compares with LAMMPS. From Axel Kohlmeyer. [Link](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxha29obG1leXxneDo0YTNhZTUwMzU2NTIzNzYy)
 
 #### Books:
 1. D. Frenkel and B. Smit, Understanding Molecular Simulations: From  Algorithms to Applications, Academic Press, 2nd edition. 
