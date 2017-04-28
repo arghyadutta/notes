@@ -109,7 +109,8 @@ Linux is known for its customizability. Hence we shall behold into some simple t
 ls -l
 ll
 ```
-Sometimes it is necessary to look into files and folders in detail. This detail in linux can be visualized through `ls` with the flag `-l`, wherein the terminal lists that directory in a long listed format. But typing `ls -l` takes a few seconds longer than `ll`, doesn't it? It does IMHO. Well, by modifying the `~/.bashrc` file located in your home directory ( `~/` means home directory of the user). All you have to do is `echo 'alias ll="/usr/bin/ls -l"' >> ~/.bashr` or directly edit `~/.bashr` with your favorite editing tool (use `vim`) to add `alias ll="/usr/bin/ls -l"` at the end of the file and save. Next time when you want to long list a directory, use `ll`. `ll` in this case is called an alias. `Aliases can saveth timeth and since timeth is money, aliases art the way to go` - Unknown.
+Sometimes it is necessary to look into files and folders in detail. This detail in linux can be visualized through `ls` with the flag `-l`, wherein the terminal lists that directory in a long listed format. But typing `ls -l` takes a few seconds longer than `ll`, doesn't it? It does IMHO. Well, modifying the `~/.bashrc` file located in your home directory ( `~/` means home directory of the user) will do the job. All you have to do is `echo 'alias ll="/usr/bin/ls -l"' >> ~/.bashr` or directly edit `~/.bashr` with your favorite editing tool (use `vim`) to add `alias ll="/usr/bin/ls -l"` at the end of the file and save. Next time when you want to long list a directory, use `ll`. `ll` in this case is called an alias. 
+`Aliases can saveth timeth and since timeth is money, aliases art the way to go - Unknown.`
 
 ## Source:
 1) https://quickleft.com/blog/command-line-tutorials-finding-grepping/
