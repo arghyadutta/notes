@@ -88,6 +88,11 @@ watch --interval=1 qstat
 ```
 `watch` command can be your personal watchdog. For users working with clusters for MD simulations this can be a handy utility. With `watch` command one can track any process/command at a preset time interval.
 Line 2 would show all jobs submitted to the cluster and display/update the progress every 1 second. This can be used in combination with any command/file that keeps changing over time (log files for instance).
+```bash
+Ctrl+R
+```
+Pressing `Ctrl+R` while on the terminal will let you reverse search your command history. Enter whatever you are searching for or keep pressing `Ctrl+R` to continue searching backward in chronological order. A neat tip is to add a `#frequent` tag everytime you use a long command. Next time you want to use it, do a reverse search for the tag `#frequent`! `#` is a delimiter and won't be executed: [idea-source](https://unix.stackexchange.com/a/166927).
+
 
 ## Source:
 1) https://quickleft.com/blog/command-line-tutorials-finding-grepping/
