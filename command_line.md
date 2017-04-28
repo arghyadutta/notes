@@ -101,8 +101,10 @@ Ctrl+R
 ```
 Pressing `Ctrl+R` while on the terminal will let you reverse search your command history. Enter whatever you are searching for or keep pressing `Ctrl+R` to continue searching backward in chronological order. A neat tip is to add a `#frequent` tag everytime you use a long command. Next time you want to use it, do a reverse search for the tag `#frequent`! `#` is a delimiter and won't be executed: [idea-source](https://unix.stackexchange.com/a/166927).
 
-##Tweaks
+## Tweaks
 Linux is known for its customizability. Hence we shall behold into some simple tweaks which couldst maketh thy life smoother! 
+
+* Alias
 ```bash
 ls -l
 ll
