@@ -1,5 +1,5 @@
 # Compilation of useful bash commands for reference. Nothing original. :punch:
-###### command line navigation ######
+### command line navigation ###
  * To jump to the beginning of the line: `ctrl + a`.
  * To get to the end of the line:  `ctrl + e`.
  * To move back and forth between individual characters (just like the left and right arrow keys, but now you don't have to move your hand): `ctrl + b` and `ctrl + f`
