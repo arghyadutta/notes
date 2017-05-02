@@ -11,8 +11,8 @@ Cheat-sheet for those working in MD.
 
 ## Tasks
 Checked tasks are active work in progress.
-- [ ] [LAMMPS](https://github.com/thatgeeman/notes/blob/master/LAMMPS.md)
-- [x] [command_line](https://github.com/thatgeeman/notes/blob/master/command_line.md)
+- [x] [LAMMPS](https://github.com/thatgeeman/notes/blob/master/LAMMPS.md)
+- [x] [command_line](https://github.com/thatgeeman/notes/blob/master/command_line.md) 
 - [ ] [VMD](https://github.com/thatgeeman/notes/blob/master/VMD.md)
 
 ## File Description
