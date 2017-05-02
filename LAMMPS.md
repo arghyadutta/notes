@@ -25,14 +25,10 @@ This can be done by hand or using dedicated packages.
 #### LAMMPS units 
 
 #### Running the simulation  
-* [fix nve/limit](http://lammps.sandia.gov/doc/fix_nve_limit.html) 
-
-fix ID group-ID nve/limit xmax
-
-xmax = maximum distance an atom can move in one timestep (distance units)
-
-fix 1 all nve/limit 0.1
-
+* [fix nve/limit](http://lammps.sandia.gov/doc/fix_nve_limit.html)  
+fix ID group-ID nve/limit xmax  
+xmax = maximum distance an atom can move in one timestep (distance units)  
+fix 1 all nve/limit 0.1  
 Perform constant NVE updates of position and velocity for atoms in the group each timestep. A limit is imposed on the maximum distance an atom can move in one timestep. This is useful when starting a simulation with a configuration containing highly overlapped atoms. Normally this would generate huge forces which would blow atoms out of the simulation box, causing LAMMPS to stop with an error.
 #### Output particle position 
 
