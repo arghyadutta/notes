@@ -1,7 +1,5 @@
 # Titbits of LAMMPS
-Nothing original here, everything compiled from other sources. But it is hard to find
-useful instruction about LAMMPS in one place on the web. I am trying to put together 
-few useful commands and ideas which I got online in one place for *my* easy comprehension.
+Nothing original here, everything compiled from other sources. But it is hard to find useful instruction about LAMMPS in one place on the web. I am trying to put together few useful commands and ideas which I got online in one place for *my* easy comprehension.
 
 #### Parts of an input script: [Source](http://www.u.arizona.edu/~stefanb/Files/HPCTutorials/MD-lammps-Final.pdf)
 * Parts of An Input Script
@@ -16,13 +14,13 @@ few useful commands and ideas which I got online in one place for *my* easy comp
 
 #### Generating the initial configuration
 
-This can be done by hand or using dedicated packages.  
-Example [Link](http://lammps.sandia.gov/doc/99/data_format.html)
+This can be done by hand or using dedicated packages.    
+Example [Link](http://lammps.sandia.gov/doc/99/data_format.html)  
 Sample file with Annotations
 
-Here is a sample file with annotations in parenthesis and lengthy sections replaced by dots (...). Note that the blank lines are important in this example.
+Here is a sample file with annotations in parenthesis and lengthy sections replaced by dots (...). **Note that the blank lines are important in this example.**
 
-
+```
 LAMMPS Description           (1st line of file)
 
 100 atoms         (this must be the 3rd line, 1st 2 lines are ignored)
@@ -155,42 +153,44 @@ Impropers
   1 improper-type atom-1 atom-2 atom-3 atom-4  (atom-1 is central atom)
   ...
   N improper-type atom-1 atom-2 atom-3 atom-4  (N = # of impropers)
+  ```
   
-## fix bond/create command
+## fix `bond/create` command
 
-fix ID group-ID bond/create Nevery itype jtype Rmin bondtype keyword values ...
-ID, group-ID are documented in fix command
-bond/create = style name of this fix command
-Nevery = attempt bond creation every this many steps
-itype,jtype = atoms of itype can bond to atoms of jtype
-Rmin = 2 atoms separated by less than Rmin can bond (distance units)
-bondtype = type of created bonds
+```
+fix ID group-ID bond/create Nevery itype jtype Rmin bondtype keyword values 
+```
+* Nevery = attempt bond creation every this many steps
+* itype,jtype = atoms of itype can bond to atoms of jtype
+* Rmin = 2 atoms separated by less than Rmin can bond (distance units)
+* bondtype = type of created bonds
+
 zero or more keyword/value pairs may be appended to args
-keyword = iparam or jparam or prob or atype or dtype or itype
+* keyword = iparam or jparam or prob or atype or dtype or itype
 
-iparam values = maxbond, newtype
-  maxbond = max # of bonds of bondtype the itype atom can have
-  newtype = change the itype atom to this type when maxbonds exist
-jparam values = maxbond, newtype
-  maxbond = max # of bonds of bondtype the jtype atom can have
-  newtype = change the jtype atom to this type when maxbonds exist
-prob values = fraction seed
-  fraction = create a bond with this probability if otherwise eligible
-  seed = random number seed (positive integer)
-atype value = angletype
-  angletype = type of created angles
-dtype value = dihedraltype
-  dihedraltype = type of created dihedrals
-itype value = impropertype
-  impropertype = type of created impropers
-Examples
+	* i/j-param values = maxbond, newtype
+    	* maxbond = max # of bonds of bondtype the i/j-type atom can have
+  		* newtype = change the i/j-type atom to this type when maxbonds exist
+	* prob values = fraction seed
+  		* fraction = create a bond with this probability if otherwise eligible
+  		* seed = random number seed (positive integer)
+	* atype value = angletype
+  		* angletype = type of created angles
+	* dtype value = dihedraltype
+  		* dihedraltype = type of created dihedrals
+	* itype value = impropertype
+  		* impropertype = type of created impropers
 
+*Examples*
+```
 fix 5 all bond/create 10 1 2 0.8 1
 fix 5 all bond/create 1 3 3 0.8 1 prob 0.5 85784 iparam 2 3
 fix 5 all bond/create 1 3 3 0.8 1 prob 0.5 85784 iparam 2 3 atype 1 dtype 2
-Description
+```
+*Description*
 
-Create bonds between pairs of atoms as a simulation runs according to specified criteria. This can be used to model cross-linking of polymers, the formation of a percolation network, etc. In this context, a bond means an interaction between a pair of atoms computed by the bond_style command. Once the bond is created it will be permanently in place. Optionally, the creation of a bond can also create angle, dihedral, and improper interactions that bond is part of. See the discussion of the atype, dtype, and itype keywords below.
+Create bonds between pairs of atoms as a simulation runs according to specified criteria. This can be used to model cross-linking of polymers, the formation of a percolation network, etc. In this context, a bond means an interaction between a pair of atoms computed by the bond_style command. Once the bond is created it will be permanently in place. Optionally, the creation of a bond can also create angle, dihedral, and improper interactions that bond is part of. 
+
 #### The underlying principle
 
 #### Setting up the force field 
@@ -199,13 +199,18 @@ Create bonds between pairs of atoms as a simulation runs according to specified 
 
 #### Running the simulation  
 * [`fix nve/limit`](http://lammps.sandia.gov/doc/fix_nve_limit.html)  
-fix ID group-ID nve/limit xmax  
+`fix ID group-ID nve/limit xmax`
 xmax = maximum distance an atom can move in one timestep (distance units)  
-Example: fix 1 all nve/limit 0.1  
+
+*Example*
+`fix 1 all nve/limit 0.1`
+
+*Description*
+
 Perform constant NVE updates of position and velocity for atoms in the group each timestep. NVE means update is done in microcanonical ensemble. A limit is imposed on the maximum distance an atom can move in one timestep. This is useful when starting a simulation with a configuration containing highly overlapped atoms. Normally this would generate huge forces which would blow atoms out of the simulation box, causing LAMMPS to stop with an error.
 
 * [`fix langevin`](http://lammps.sandia.gov/doc/fix_langevin.html)
-fix ID group-ID langevin Tstart Tstop damp seed keyword values ...  
+* `fix ID group-ID langevin Tstart Tstop damp seed keyword values ...  `
 ID, group-ID are documented in fix command  
 langevin = style name of this fix command  
 Tstart,Tstop = desired temperature at start/end of run (temperature units)  
@@ -213,8 +218,9 @@ Tstart can be a variable (see below)
 damp = damping parameter (time units)  
 seed = random number seed to use for white noise (positive integer)  
 zero or more keyword/value pairs may be appended  
-keyword = angmom or omega or scale or tally or zero 
-Example: fix 3 boundary langevin 1.0 1.0 1000.0 699483  
+keyword = angmom or omega or scale or tally or zero  
+*Example*
+`fix 3 boundary langevin 1.0 1.0 1000.0 699483`
 Apply a Langevin thermostat as described in (Schneider) to a group of atoms which models an interaction with a background implicit solvent. Used with fix nve, this command performs Brownian dynamics (BD), since the total force on each atom will have the form:
 
 F = Fc + Ff + Fr
