@@ -112,6 +112,24 @@ ll
 Sometimes it is necessary to look into files and folders in detail. This detail in linux can be visualized through `ls` with the flag `-l`, wherein the terminal lists that directory in a long listed format. But typing `ls -l` takes a long time, doesn't it? :punch: It does. Well, modifying the `~/.bashrc` file located in your home directory ( `~/` means home directory of the user) will do the job. All you have to do is `echo 'alias ll="/usr/bin/ls -l"' >> ~/.bashr` or directly edit `~/.bashr` with your favorite editing tool (use `vim`) to add `alias ll="/usr/bin/ls -l"` at the end of the file and save. Next time when you want to long list a directory, use `ll`. `ll` in this case is called an alias. 
 > Aliases can saveth timeth and since timeth is money, aliases art the way to go - Unknown.
 
+* Tmux
+```bash
+tmux
+tmux attach-session -t0
+```
+Terminal MUltiplier(x) or `tmux` is a great tool for sysadmins and multi-taskers. It might seem a bit advanced for beginners but actually the basic list of `tmux` commands are simple and very useful across all user levels. Consider a scenario where you are SSH-ing to a server, and you are running a really long script that takes 10 hours to complete. But keeping pipe connection alive throughout the session is difficult. With `tmux` once can connect to the SSH server, run the script, "detach" from the terminal while running the script on the server side, shutdown your computer, restart your computer after 9 hours, "attach" to the previous terminal and still have the script running! Another scenario: A novice user is being taught programming (in `vim` editor again) by an expert connected through `tmux` to the users terminal. Once the expert "attaches" to the same tmux session as the user, they both can work on the program at the same time. Changes made by one user will be visible (live update with each key tap) to the other. This makes `tmux` a great tool for collaboration purposes too! This is sort of the priciple behind a shared Google Docs document. 
+Typing `tmux` in to the terminal will open a new session with a default name (normally the path to the directory where you started `tmux`). `tmux ls` will list all active sessions with session ID. If there is an active session, you can connect to that session by typing Line 2 as shown above: here `0` is the session ID. With `tmux`, there is a shortcut activation keybinding : `Ctrl+B`. Using this keybinding one can activate a lot of functions in tmux. A complete list of functions can be found in this [website] (https://danielmiessler.com/study/tmux). 
+Once you press `Ctrl+B`, almost all of the keyboard can be used to invoke a function. For instance pressing `:`  will invoke a command line within `tmux` - here you can enter '`new-window` to create a new window. To go back to the previous window, use the keybinding and then press `p'. For the next window use `n'. The window you are curently in is highlighted with a `*` after the window name. 
+To create a horizontal pane in the current window use `%`. 
+To create a vertical pane in the current window use `"`. 
+To switch between panes, use `o`. List the pane number with `q`.
+To rearrange the panes, use `[spacekey]`
+To kill a pane, use `x` and confirm with `y` for yes or `n` for no.
+To list all windows, use `w`.
+One can rename a window with `,`.
+Once you are done, you can dettach a session with `d`. And as mentioned before attach back to it with Line 2. All normal functions within a terminal can also be done inside a `tmux` window except scrolling. For scrolling up you have to press `[` (which takes you to copy mode) after the keybinding and can use arrow keys to move the cursor.
+
+
 ## Source:
 1) https://quickleft.com/blog/command-line-tutorials-finding-grepping/
 2) https://quickleft.com/blog/command-line-tutorials-tips-tricks/
