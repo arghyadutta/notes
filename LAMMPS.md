@@ -16,7 +16,145 @@ few useful commands and ideas which I got online in one place for *my* easy comp
 
 #### Generating the initial configuration
 
-This can be done by hand or using dedicated packages.
+This can be done by hand or using dedicated packages.  
+Example [Link](http://lammps.sandia.gov/doc/99/data_format.html)
+Sample file with Annotations
+
+Here is a sample file with annotations in parenthesis and lengthy sections replaced by dots (...). Note that the blank lines are important in this example.
+
+
+LAMMPS Description           (1st line of file)
+
+100 atoms         (this must be the 3rd line, 1st 2 lines are ignored)
+95 bonds                (# of bonds to be simulated)
+50 angles               (include these lines even if number = 0)
+30 dihedrals
+20 impropers
+
+5 atom types           (# of nonbond atom types)
+10 bond types          (# of bond types = sets of bond coefficients)
+18 angle types         
+20 dihedral types      (do not include a bond,angle,dihedral,improper type
+2 improper types             line if number of bonds,angles,etc is 0)
+
+-0.5 0.5 xlo xhi       (for periodic systems this is box size,
+-0.5 0.5 ylo yhi        for non-periodic it is min/max extent of atoms)
+-0.5 0.5 zlo zhi       (do not include this line for 2-d simulations)
+
+Masses
+
+  1 mass
+  ...
+  N mass                           (N = # of atom types)
+
+Nonbond Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of atom types)
+
+Bond Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of bond types)
+
+Angle Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of angle types)
+
+Dihedral Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of dihedral types)
+
+Improper Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of improper types)
+
+BondBond Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of angle types)
+
+BondAngle Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of angle types)
+
+MiddleBondTorsion Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of dihedral types)
+
+EndBondTorsion Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of dihedral types)
+
+AngleTorsion Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of dihedral types)
+
+AngleAngleTorsion Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of dihedral types)
+
+BondBond13 Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of dihedral types)
+
+AngleAngle Coeffs
+
+  1 coeff1 coeff2 ...
+  ...
+  N coeff1 coeff2 ...              (N = # of improper types)
+
+Atoms
+
+  1 molecule-tag atom-type q x y z nx ny nz  (nx,ny,nz are optional -
+  ...                                    see "true flag" input command)
+  ...                
+  N molecule-tag atom-type q x y z nx ny nz  (N = # of atoms)
+
+Bonds
+
+  1 bond-type atom-1 atom-2
+  ...
+  N bond-type atom-1 atom-2             (N = # of bonds)
+
+Angles
+
+  1 angle-type atom-1 atom-2 atom-3  (atom-2 is the center atom in angle)
+  ...
+  N angle-type atom-1 atom-2 atom-3  (N = # of angles)
+
+Dihedrals
+
+  1 dihedral-type atom-1 atom-2 atom-3 atom-4  (atoms 2-3 form central bond)
+  ...
+  N dihedral-type atom-1 atom-2 atom-3 atom-4  (N = # of dihedrals)
+
+Impropers
+
+  1 improper-type atom-1 atom-2 atom-3 atom-4  (atom-1 is central atom)
+  ...
+  N improper-type atom-1 atom-2 atom-3 atom-4  (N = # of impropers)
 
 #### The underlying principle
 
