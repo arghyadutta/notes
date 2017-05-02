@@ -155,7 +155,42 @@ Impropers
   1 improper-type atom-1 atom-2 atom-3 atom-4  (atom-1 is central atom)
   ...
   N improper-type atom-1 atom-2 atom-3 atom-4  (N = # of impropers)
+  
+## fix bond/create command
 
+fix ID group-ID bond/create Nevery itype jtype Rmin bondtype keyword values ...
+ID, group-ID are documented in fix command
+bond/create = style name of this fix command
+Nevery = attempt bond creation every this many steps
+itype,jtype = atoms of itype can bond to atoms of jtype
+Rmin = 2 atoms separated by less than Rmin can bond (distance units)
+bondtype = type of created bonds
+zero or more keyword/value pairs may be appended to args
+keyword = iparam or jparam or prob or atype or dtype or itype
+
+iparam values = maxbond, newtype
+  maxbond = max # of bonds of bondtype the itype atom can have
+  newtype = change the itype atom to this type when maxbonds exist
+jparam values = maxbond, newtype
+  maxbond = max # of bonds of bondtype the jtype atom can have
+  newtype = change the jtype atom to this type when maxbonds exist
+prob values = fraction seed
+  fraction = create a bond with this probability if otherwise eligible
+  seed = random number seed (positive integer)
+atype value = angletype
+  angletype = type of created angles
+dtype value = dihedraltype
+  dihedraltype = type of created dihedrals
+itype value = impropertype
+  impropertype = type of created impropers
+Examples
+
+fix 5 all bond/create 10 1 2 0.8 1
+fix 5 all bond/create 1 3 3 0.8 1 prob 0.5 85784 iparam 2 3
+fix 5 all bond/create 1 3 3 0.8 1 prob 0.5 85784 iparam 2 3 atype 1 dtype 2
+Description
+
+Create bonds between pairs of atoms as a simulation runs according to specified criteria. This can be used to model cross-linking of polymers, the formation of a percolation network, etc. In this context, a bond means an interaction between a pair of atoms computed by the bond_style command. Once the bond is created it will be permanently in place. Optionally, the creation of a bond can also create angle, dihedral, and improper interactions that bond is part of. See the discussion of the atype, dtype, and itype keywords below.
 #### The underlying principle
 
 #### Setting up the force field 
