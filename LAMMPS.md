@@ -65,7 +65,7 @@ Means change the pair potential parameters $\epsilon=1$ and $\sigma=1$. Also cha
 * `pair_modify shift yes`
 Means now shift the potential so that the value at $r_c$ becomes 0. After the 2 changes above the pair potential should become:   
 $E=4\(\frac{1}{r^{12}}-\frac{1}{r^6}\)-4\(\frac{1}{r_c^{12}}-\frac{1}{r_c^6}\)$  
-If you set $r_c=\sqrt[6][2]$, then the minima of the potential with value -1 will be shifted upwards by 1, and the minima
+If you set $r_c=\sqrt[6]{2}$, then the minima of the potential with value -1 will be shifted upwards by 1, and the minima
 will now be 0. So this has now become a purely repulsive truncated shifted Lennard-Jones potential.
 
 #### LAMMPS units 
