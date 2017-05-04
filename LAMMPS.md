@@ -197,12 +197,12 @@ Create bonds between pairs of atoms as a simulation runs according to specified 
 ##### Pair potential set up:
 * `pair_style lj/cut rc`
 Means set up a LJ potential between pairs and put a cutoff at $r_c*\sigma$ distance. The potential is of the form  
-$E=4\epsilon\(\frac{\sigma}{r^12}-\frac{\sigma}{r^6})$.
+$E=4\epsilon\(\frac{\sigma}{r^{12}}-\frac{\sigma}{r^6})$.
 * `pair_coeff * * 1 1 rc`  
 Means change the pair potential parameters $\epsilon=1$ and $\sigma=1$. Also change the cutoff to $r_c$.  
 * `pair_modify shift yes`
 Means now shift the potential so that the value at $r_c$ becomes 0. After the 2 changes above the pair potential should become:   
-$E=4\(\frac{1}{r^12}-\frac{1}{r^6}\)-4\(\frac{1}{r_c^12}-\frac{1}{r_c^6}\)$
+$E=4\(\frac{1}{r^{12}}-\frac{1}{r^6}\)-4\(\frac{1}{r_c^{12}}-\frac{1}{r_c^6}\)$
 
 #### LAMMPS units 
 
