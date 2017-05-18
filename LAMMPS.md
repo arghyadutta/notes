@@ -68,6 +68,10 @@ $E=4\(\frac{1}{r^{12}}-\frac{1}{r^6}\)-4\(\frac{1}{r_c^{12}}-\frac{1}{r_c^6}\)$
 If you set $r_c=\sqrt[6]{2}$, then the minima of the potential with value -1 will be shifted upwards by 1, and the minima
 will now be 0. So this has now become a purely repulsive truncated shifted Lennard-Jones potential.
 
+* (Applicable for Gromacs, need to check for LAMMPS). Potential energies are of 3 types:
+	* Bonded: can be 2-, 3- and 4- body (bond strecthing, bond angle and dihedral potentials respectively). This are computed on the basis of a fixed list.
+	* Non-bonded: Like LJ, Coulomb. This interactions are computed on the basis of a neighbour list.
+	* Restraint: If there is some restriction on the angle, bond etc
 #### LAMMPS units 
 
 #### Running the simulation  
