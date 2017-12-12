@@ -1,11 +1,11 @@
-# tools to monitor network connections
+# Tools to monitor network connections
 
 ## definitions
 * Listening: If data travels from computer A to B, ports that are in waiting state
 in computer B to receive data from computer A in the network are called the
 listening ports.
 
-* Netstat
+### Netstat
 ```
 netstat -c
 ```
@@ -13,7 +13,7 @@ To continuously monitor (-c) hosts and available ports. Or use -tulpnc flag to
 show all TCP and UDP (-t -u) stats along with listening ports (-l) and processes (-p)
 Problem is that this moves a bit fast for the eye to catch up with.
 
-* Iftop
+### Iftop
 Is a what `top` is for processor usage. Similar to `top`, `iftop` displays network
 traffic by means of a much simpler graph. `iftop` can listen to a specific device
 if we use it with the -i flag.
@@ -31,5 +31,5 @@ To carefully look at some suspicious data, type `P`, and then `l`. This freezes
 the screen and we can now search specifically for a particular IP address. Press
 `P` again to unpause and to continue monitoring the filtered IP.
 
-## source:
+## Source:
 1) Humble Bundle/Practical Linux Topics

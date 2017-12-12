@@ -129,7 +129,9 @@ To list all windows, use `w`.<br />
 One can rename a window with `,`.<br />
 Once you are done, you can dettach a session with `d`. And as mentioned before attach back to it with Line 2. All normal functions within a terminal can also be done inside a `tmux` window except scrolling. For scrolling up you have to press `[` (which takes you to copy mode) after the keybinding and can use arrow keys to move the cursor.<br />
 
-* Shred, dd, wipefs [warning: can wipe entire disk; user discretion is advised]
+* Shred, dd, wipefs 
+
+[warning: can wipe entire disk; user discretion is advised]
 To remove the entirety of some sensitive information stored in a file or a 
 directory, `rm` is not the best option available. Instead use `shred` or `dd` or
 `wipefs`. 
