@@ -13,6 +13,7 @@ Cheat-sheet for those working in MD.
 Checked tasks are active work in progress.
 - [x] [LAMMPS](https://github.com/thatgeeman/notes/blob/master/LAMMPS.md)
 - [x] [command_line](https://github.com/thatgeeman/notes/blob/master/command_line.md) 
+- [ ] [network](https://github.com/thatgeeman/notes/blob/master/network.md)
 - [ ] [VMD](https://github.com/thatgeeman/notes/blob/master/VMD.md)
 
 ## File Description
