@@ -129,8 +129,48 @@ To list all windows, use `w`.<br />
 One can rename a window with `,`.<br />
 Once you are done, you can dettach a session with `d`. And as mentioned before attach back to it with Line 2. All normal functions within a terminal can also be done inside a `tmux` window except scrolling. For scrolling up you have to press `[` (which takes you to copy mode) after the keybinding and can use arrow keys to move the cursor.<br />
 
+* Shred, dd, wipefs [warning: can wipe entire disk; user discretion is advised]
+To remove the entirety of some sensitive information stored in a file or a 
+directory, `rm` is not the best option available. Instead use `shred` or `dd` or
+`wipefs`. 
+`shred` utility can obfuscate contents of a disk by overwriting it with random data.
+Historically degaussing is the preferred method to wipe secretive data (NSA uses this): 
+apply a fluctuating magnetic potential across the disk, which can inturn affects 
+the disks magnetic field, and leaves the disk inoperable.
+To use `shred` we have to install the linux package `coreutils`. To wipe an entire disk
+partition (`/dev/sdc1`), use:
+```
+shred -vfz -n 25 /dev/sdc1
+
+# to get partition name, run as root
+fdisk -l
+```
+Here, `-v` is verbose, `-f` is to force the operation, `-z` is to overwrite with
+zeros. `-n 25` overwrites the disk 25 times to obfuscate the previously stored data
+even more.
+`dd` is another destructive tool that can do the same. Sector size, seek and sector number
+can be found from the `fdisk -l <disk-path>` and `fdisk -l <partition-path>` command.
+Note that running `fdisk` on an entire disk, say `/dev/sda` and a partition in the disk,
+say `/dev/sda1/`, will yield entirely different information, both of which are needed
+to use `dd`. `if=` stands for input file, which can be anything like `/dev/zero' or 
+`/dev/urandom` or even `/dev/null`. This will write the `of` partition with zeros or nulls or
+random data.
+```
+dd if=RANDOMDATA of=/dev/sdc1 bs=<sector-size> count=<sector_number> seek=<sector_where_to_start>
+```
+`wipefs` can wipe the entire file system we specify. For the `wipefs` utility to work,
+we unmount the partition first.
+```
+umount /dev/sdc
+```
+Now we run the wipe command
+```
+wipefs -a /dev/sdc
+```
+
 
 ## Source:
 1) https://quickleft.com/blog/command-line-tutorials-finding-grepping/
 2) https://quickleft.com/blog/command-line-tutorials-tips-tricks/
 3) https://tutorialinux.com/ (YouTube Channel is cool)
+4) Humble Bundle/ Practical Linux Topics
