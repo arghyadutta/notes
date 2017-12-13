@@ -4,8 +4,7 @@
 
 ## Motivation
 Monte Carlo is a place in Italy famous for its casinos.
-Monte Carlo in simulation lingo assumes that random kicks act on particles in a box to simulate velocities.
-Computationally these random numbers can be added to the postions using random number generators, which take a random seed as input.
+Monte Carlo in simulation lingo assumes that repeated random sampling can provide approximate solutions. Randomness is associated with casinos also. Unless you cheat. Computationally random numbers can be used to cause fluctuations in particle postions to simulate particle motion.
 
 ##### some side tracking
 There are some cracked games that require us to move our cursor around a specified zone in the installation GUI, which the software uses
@@ -26,3 +25,7 @@ There is a famous musical called a Hamilton, which is a musical about the life o
 
 ## Future
 Simpsons rule
+
+### References
+[1] https://math.dartmouth.edu/theses/undergrad/2014/Vaidyanathan-Thesis.pdf
+[2] http://online_casino_news.hundredpercentgambling.com/2016/03/zero-margin-blackjack-randomness-test.html
