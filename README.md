@@ -1,5 +1,5 @@
 # Notes
-Cheat-sheet for those working in MD. and a wee bit of MC.
+Cheat-sheet for those working in MD (a wee bit of MC intro included).
 
 # Table of Contents
 1. [Introduction](#intro)
