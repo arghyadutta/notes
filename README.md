@@ -15,7 +15,7 @@ Checked tasks are active work in progress.
 - [x] [command_line](https://github.com/thatgeeman/notes/blob/master/command_line.md) 
 - [ ] [network](https://github.com/thatgeeman/notes/blob/master/network.md)
 - [ ] [VMD](https://github.com/thatgeeman/notes/blob/master/VMD.md)
-- [ ] [Monte Carlo-methods](https://github.com/thatgeeman/notes/blob/master/monte-carlo.md): Non-scientific
+- [x] [Monte Carlo-methods](https://github.com/thatgeeman/notes/blob/master/monte-carlo.md): Non-scientific
 
 ## File Description
 1. LAMMPS.md : Notes on working with LAMMPS
