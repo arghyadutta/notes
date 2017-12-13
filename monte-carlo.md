@@ -28,4 +28,5 @@ Simpsons rule
 
 ### References
 [1] https://math.dartmouth.edu/theses/undergrad/2014/Vaidyanathan-Thesis.pdf
+
 [2] http://online_casino_news.hundredpercentgambling.com/2016/03/zero-margin-blackjack-randomness-test.html
