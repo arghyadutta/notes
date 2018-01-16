@@ -1,5 +1,5 @@
 # Compilation of one liners : awk 
-#### print the simple average of rows in a column
+#### print the simple average of a column
 ```
 awk '{ sum += $12 } END { if (NR>0) print sum / NR }' < input.file
 ```
