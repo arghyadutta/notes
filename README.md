@@ -12,9 +12,6 @@ Cheat-sheet for those working in MD (a wee bit of MC intro included).
 ## Tasks
 Checked tasks are active work in progress.
 - [x] [LAMMPS](https://github.com/thatgeeman/notes/blob/master/LAMMPS.md)
-- [-] [command_line](https://github.com/thatgeeman/notes/blob/master/command_line.md) 
-- [ ] [network](https://github.com/thatgeeman/notes/blob/master/network.md)
-- [ ] [VMD](https://github.com/thatgeeman/notes/blob/master/VMD.md)
 - [x] [Monte Carlo-methods](https://github.com/thatgeeman/notes/blob/master/monte-carlo.md): Non-scientific
 
 ## File Description
