@@ -4,6 +4,7 @@
 1) Main channel: https://www.youtube.com/user/CppCon
 
 
+# Science resources 
 ### Highschool/University Level Math/Science Resources for times when you feel like "you know nothing":
 
 1) https://openstax.org/subjects/math : Algebra to Advanced Calculus with lots of examples
