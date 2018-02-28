@@ -113,10 +113,7 @@ Pressing `Ctrl+R` while on the terminal will let you reverse search your command
 
 `:x` or `:wq` to write, save and quit 
 
-```
-:setlocal wrap nolist linebreak breakat=\
-```
-Allow text reflow in vim
+`:setlocal wrap nolist linebreak breakat=\` to allow text reflow in vim
 
 `/[any keyword]` to search for patterns in the document. `:%s/[search]/[replace with]/g` to search and replace strings with something else.
 
