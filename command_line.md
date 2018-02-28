@@ -101,6 +101,26 @@ Ctrl+R
 ```
 Pressing `Ctrl+R` while on the terminal will let you reverse search your command history. Enter whatever you are searching for or keep pressing `Ctrl+R` to continue searching backward in chronological order. A neat tip is to add a `#frequent` tag everytime you use a long command. Next time you want to use it, do a reverse search for the tag `#frequent`! `#` is a delimiter and won't be executed: [idea-source](https://unix.stackexchange.com/a/166927).
 
+## Vim Essentials
+
+`vim <filename>` to open an already exixting file or to create a new one
+
+`i` or `[insert]` button to go into insert mode where you can type the same way as you do in `nano`
+
+`r` or `[insert]` button twice to go into replace mode where the cursor changes to block mode and letters on which the cursor sits can be replaced
+
+`[escape]` button to quit insert or replace mode
+
+`:x` or `:wq` to write, save and quit 
+
+```
+:setlocal wrap nolist linebreak breakat=\
+```
+Allow text reflow in vim
+
+`/[any keyword]` to search for patterns in the document. `:%s/[search]/[replace with]/g` to search and replace strings with something else.
+
+
 ## Tweaks
 Linux is known for its customizability. Hence we shall behold into some simple tweaks which couldst maketh thy life smoother! 
 
