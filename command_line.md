@@ -117,6 +117,8 @@ Pressing `Ctrl+R` while on the terminal will let you reverse search your command
 
 `/[any keyword]` to search for patterns in the document. `:%s/[search]/[replace with]/g` to search and replace strings with something else.
 
+You can also use wildcards to search for part of words in a document. `:%s/*dis*/hello/g` this replaces every occurance of any word containing the part `dis` and replace that part with `hello`. Instead of specifying the entire document as the target, you can ask vim to search within a range of line numbers with `:19,25s/[search]/[replace with]/g`, where 19 is the start line and 25 is end line till where vim searches. Adding `g` to the end implies that no user confirmation will be asked while doing any operation. Instead if you add `gc`, everytime a pattern is matched, the user will be asked for confirmation to replace.
+
 
 ## Tweaks
 Linux is known for its customizability. Hence we shall behold into some simple tweaks which couldst maketh thy life smoother! 
