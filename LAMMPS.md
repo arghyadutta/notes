@@ -119,6 +119,7 @@ Note that unless you use the omega or angmom keywords, the thermostat effect of 
 #### Output thermodynamic variables 
 
 #### Helpful web-pages 
+0. https://icme.hpc.msstate.edu/mediawiki/index.php/LAMMPS_tutorials
 1. [Official LAMMPS Documentation](http://lammps.sandia.gov/doc/Manual.html) (most unhelpful for beginners, IMHO. :-1:) . Useful for looking up commands.
 2. LAMMPS for dummies. :+1:
 [part 1](http://wp.df.uba.ar/gebi/wp-content/uploads/sites/9/2016/06/lammps.pdf)
