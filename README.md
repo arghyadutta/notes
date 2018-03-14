@@ -1,5 +1,5 @@
 # Notes
-Cheat-sheet for those working in MD. 
+Short guides for general linux stuff. 
 
 # Table of Contents
 1. [Introduction](#intro)
@@ -8,6 +8,9 @@ Cheat-sheet for those working in MD.
 
 ## Introduction
 
+We, George and Arghya, are planning to put together nifty tit-bits of 
+regular linux softwares in this git repository in several,
+appropriately-named files.
 
 ## Tasks
 Checked tasks are active work in progress.
