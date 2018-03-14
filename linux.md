@@ -10,4 +10,5 @@ export http_proxy=http://www-proxy.mpip-mainz.mpg.de:8080
 export https_proxy=http://www-proxy.mpip-mainz.mpg.de:8080
 export no_proxy="127.0.0.1,localhost,.mpip-mainz.mpg.de"
 
-
+* Also, MPI suggests not to change the .bashrc, but the .profile. Not sure
+  why?
