@@ -1,9 +1,13 @@
 # Compilation of useful bash commands for reference. Nothing original. :punch:
+## to do: create links to the entries.
 * command line navigation 
   - To jump to the beginning of the line: `ctrl + a`.
   - To get to the end of the line:  `ctrl + e`.
   - To move back and forth between individual characters (just like the left and right arrow keys, but now you don't have to move your hand): `ctrl + b` and `ctrl + f`
   - To move between words in the command line, use `esc + b` and `esc + f`. 
+
+* env
+It shows the the current environment variables. But I am a bit confused about path and environment variables. need to learn that stuff.
 
 * pushd and popd 
 Let's say you accidentally change directories and you don't want to type out the whole filepath to get back to where you were. You can just type:
